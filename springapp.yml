@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: mylandmarktech/myapp 
+        image: microlinkstech/spring-boot-mongo
+
         ports:
         - containerPort: 8080
         env:
@@ -38,7 +39,7 @@ spec:
   - port: 80
     targetPort: 8080
    # nodePort: 30030
-  type: ClusterIP #NodePort #LoadBalancer
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
